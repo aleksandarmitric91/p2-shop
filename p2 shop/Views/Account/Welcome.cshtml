@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dobro došao korisniče @Session["Korisničko_ime"].ToString().</h2>
+
+<table>
+    <tr>
+        <td style="width: 60%;">
+            <p>
+                Pronađite ono što vam treba na našoj stranici.
+            </p>
+        </td>
+        <td style="text-align:center; margin-top:40px;">
+            <a href="~/Shoping/Index"><img src="~/Resources/startShoping.jpg" style="width:330px;height:80px;">
+        </td>
+    </tr>
+</table>
+

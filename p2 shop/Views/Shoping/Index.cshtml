@@ -1,0 +1,115 @@
+﻿@model IEnumerable<p2_shop.Models.Proizvodi>
+
+@{
+    ViewBag.Title = "Shoping";
+    IEnumerable<p2_shop.Models.Pregledi> pregledi = ViewBag.Ocjene;
+    int suma_ocjena, broj_ocjena;
+    double prosjek;
+}
+
+
+<div class="col-md-10">
+    @{string putanja = "";
+        if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("/Shoping/Index/"))
+        {
+            putanja = HttpContext.Current.Request.Url.AbsoluteUri.Substring(HttpContext.Current.Request.Url.AbsoluteUri.LastIndexOf("/") + 1);
+        }
+        else
+        {
+            putanja = "Svi proizvodi";
+        }
+        putanja = putanja.Replace("%20"," ");
+        putanja = putanja.Replace("%C4%87", "ć");
+        putanja = putanja.Replace("%C5%A1", "š");
+    }
+    <h1 style="margin-top:5px; font-size:250%;">Prodaja\@putanja </h1> 
+    <div class="row carousel-holder">
+        <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    </div>
+                    <div class="item">
+                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <a href="/Shoping/Details/@item.Proizvod_ID">
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/320x150" alt="">
+                        <div class="caption">
+                            <h4 class="pull-right">@item.Cijena KM</h4>
+                            <h4>
+                                <a href="/Shoping/Details/@item.Proizvod_ID">@item.Naziv</a>
+                            </h4>
+                            <p>@item.Opis</p>
+                        </div>
+                        <div class="ratings">
+                            @{
+                                broj_ocjena = 0;
+                                suma_ocjena = 0;
+                                prosjek = 0;
+                                foreach (var pregled in pregledi)
+                                {
+                                    if (item.Proizvod_ID == pregled.FK_Proizvod_ID)
+                                    {
+                                        broj_ocjena++;
+                                        suma_ocjena += (Int32)pregled.Ocjena;
+                                    }
+                                }
+                                try
+                                {
+                                    prosjek = (double)suma_ocjena / (double)broj_ocjena;
+                                }
+                                catch (Exception)
+                                {}
+                            }
+                            <p class="pull-right">@broj_ocjena ocjena</p>
+                            <p>
+                               @for (int i = 1; i <= 5; i++)
+                               {
+                                   double k = i - 0.5;
+                                   if (k <= prosjek)
+                                   {
+                                    <span class="glyphicon glyphicon-star"></span>
+                                   }
+                                   else
+                                   {
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                   }
+                               }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+

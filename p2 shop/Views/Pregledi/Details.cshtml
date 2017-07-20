@@ -1,0 +1,66 @@
+﻿@model p2_shop.Models.Pregledi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10">
+    <div class="row">
+        <div class="col-md-10">
+            <h2>Detalji</h2>
+
+            <h4>Pregledi</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pregledac)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Pregledac)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ocjena)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ocjena)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Komentar)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Komentar)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Datum_ocjenjivanja)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Datum_ocjenjivanja)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Proizvodi.Naziv)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Proizvodi.Naziv)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Uredi", "Edit", new { id = Model.Pregled_ID }) |
+        @Html.ActionLink("Nazad na listu", "Index")
+    </p>
+</div>

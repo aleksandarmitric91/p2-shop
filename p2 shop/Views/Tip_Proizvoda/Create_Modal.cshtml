@@ -1,0 +1,72 @@
+﻿@model p2_shop.Models.Tip_Proizvoda
+
+@using (Html.BeginForm("Create_Modal", "Tip_Proizvoda"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal col-md-12">
+        <h2>Kreiraj novi tip proizvoda</h2>
+
+        <h4>Tip proizvoda</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Naziv_Tipa, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Naziv_Tipa, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Naziv_Tipa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FK_Grupa_tipa_proizvoda, "Naziv grupe", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.DropDownList("FK_Grupa_tipa_proizvoda", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FK_Grupa_tipa_proizvoda, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-md-offset-3 col-md-9" style="padding-left: 8px;">
+            <button id="GTPModal" type="button" class="btn btn-info" data-toggle="modal" data-target="#GrupaTipaProizvodaModal">Dodaj novu grupu tipa proizvoda</button>
+        </div>
+
+        <div class="form-group" style="padding-top:40px; margin-top:40px; margin-bottom:0px;">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Kreiraj novi tip proizvoda" class="btn btn-danger"/>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Modal -->
+<div class="modal fade" id="GrupaTipaProizvodaModal" role="dialog" data-backdrop="false" >
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="close1" type="button" class="close">&times;</button>
+                <h4 class="modal-title">Dodavanje nove grupe tipa proizvoda</h4>
+            </div>
+            <div class="modal-body" style="display: grid; padding:0px;">
+                @Html.Action("Create_Modal_GTP", "Grupa_tipa_proizvoda")
+            </div>
+            <div class="modal-footer">
+                <button id="close2" type="button" class="btn btn-info">Zatvori prozor</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#close1").click(function () {
+        $("#GrupaTipaProizvodaModal").modal("hide");
+        $("#TipProizvodaModal").modal("show");
+    });
+    $("#close2").click(function(){
+        $("#GrupaTipaProizvodaModal").modal("hide");
+        $("#TipProizvodaModal").modal("show");
+    });
+});
+</script>

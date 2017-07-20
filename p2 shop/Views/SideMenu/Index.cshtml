@@ -1,0 +1,45 @@
+﻿@model p2_shop.Models.Mix_Tip_Grupa_Proizvoda
+
+    <div class="col-md-3">
+        <p class="lead" style="font-size:550%;">Mega</p>
+        <p class="lead" style="font-size:550%;margin-left:40px;margin-top:-50px;">Store</p>
+        <div class="list-group">
+            <a href="/Shoping/Index/Svi proizvodi" class="list-group-item">Svi proizvodi</a>
+            <div class="panel-group" id="accordion" style="margin-bottom: 0px;">
+                @foreach (var item in Model.Grupa_listi.ToList())
+                {
+                    string komponenta = "#collapse";
+                    komponenta += Html.DisplayFor(modelItem => item.Naziv_grupe_tipa_proizvoda).ToString();
+                    <div class="panel panel-default" style="margin-top:0px;">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <p style="cursor:pointer; margin-bottom:0px;" data-toggle="collapse" data-parent="#accordion" href=@komponenta>@Html.DisplayFor(modelItem => item.Naziv_grupe_tipa_proizvoda)</p>
+                            </h4>
+                        </div>
+                        <div id=@komponenta.Substring(1) class="panel-collapse collapse">
+                           
+                            @{string link = "/Shoping/Index/";
+                                link += Html.DisplayFor(modelItem => item.Naziv_grupe_tipa_proizvoda).ToString().Replace(" ", "%20");
+                                link += "%20(Svi%20proizvodi)";
+                            }
+                            <a href=@link class="list-group-item">@Html.DisplayFor(modelItem => item.Naziv_grupe_tipa_proizvoda) (Svi proizvodi)</a>
+
+
+                            @foreach (var item1 in Model.Tipovi.ToList())
+                            {
+                                link = "/Shoping/Index/";
+                                link += Html.DisplayFor(modelItem => item1.Naziv_Tipa).ToString().Replace(" ", "%20");
+                                if (item1.FK_Grupa_tipa_proizvoda == item.Grupa_tipa_proizvoda_ID)
+                                {
+                                    <a href=@link class="list-group-item">@Html.DisplayFor(modelItem => item1.Naziv_Tipa)</a>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+            <a href="/Shoping/Index/Istaknuti" class="list-group-item">Istaknuti</a>
+            <a href="/Shoping/Index/Akcija" class="list-group-item">Akcija</a>
+        </div>
+    </div>
+

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShopingModelStoreContainer" CdmEntityContainer="ShopingEntities">
+    <EntitySetMapping Name="Tip_Proizvodas">
+      <EntityTypeMapping TypeName="ShopingModel.Tip_Proizvoda">
+        <MappingFragment StoreEntitySet="Tip Proizvoda">
+          <ScalarProperty Name="FK_Grupa_tipa_proizvoda" ColumnName="FK Grupa tipa proizvoda" />
+          <ScalarProperty Name="Naziv_Tipa" ColumnName="Naziv Tipa" />
+          <ScalarProperty Name="Tip_Proizvoda_ID" ColumnName="Tip Proizvoda ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupa_tipa_proizvodas">
+      <EntityTypeMapping TypeName="ShopingModel.Grupa_tipa_proizvoda">
+        <MappingFragment StoreEntitySet="Grupa tipa proizvoda">
+          <ScalarProperty Name="Naziv_grupe_tipa_proizvoda" ColumnName="Naziv grupe tipa proizvoda" />
+          <ScalarProperty Name="Grupa_tipa_proizvoda_ID" ColumnName="Grupa tipa proizvoda ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pregledis">
+      <EntityTypeMapping TypeName="ShopingModel.Pregledi">
+        <MappingFragment StoreEntitySet="Pregledi">
+          <ScalarProperty Name="FK_Proizvod_ID" ColumnName="FK Proizvod ID" />
+          <ScalarProperty Name="Datum_ocjenjivanja" ColumnName="Datum ocjenjivanja" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+          <ScalarProperty Name="Pregledac" ColumnName="Pregledac" />
+          <ScalarProperty Name="Pregled_ID" ColumnName="Pregled ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ShopingModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ShopingModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ShopingModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ShopingModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ShopingModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ShopingModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ShopingModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Korisnicis">
+      <EntityTypeMapping TypeName="ShopingModel.Korisnici">
+        <MappingFragment StoreEntitySet="Korisnici">
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="Šifra" ColumnName="Šifra" />
+          <ScalarProperty Name="Korisničko_ime" ColumnName="Korisničko ime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Korisnik_ID" ColumnName="Korisnik ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proizvodis">
+      <EntityTypeMapping TypeName="ShopingModel.Proizvodi">
+        <MappingFragment StoreEntitySet="Proizvodi">
+          <ScalarProperty Name="Akcija" ColumnName="Akcija" />
+          <ScalarProperty Name="Istaknuti" ColumnName="Istaknuti" />
+          <ScalarProperty Name="FK_Tip_Proizvoda" ColumnName="FK Tip Proizvoda" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Naziv_Slike" ColumnName="Naziv Slike" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Proizvod_ID" ColumnName="Proizvod ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proizvodi_Korisnicis">
+      <EntityTypeMapping TypeName="ShopingModel.Proizvodi_Korisnici">
+        <MappingFragment StoreEntitySet="Proizvodi Korisnici">
+          <ScalarProperty Name="FK_Korisnici" ColumnName="FK Korisnici" />
+          <ScalarProperty Name="FK_Proizvodi" ColumnName="FK Proizvodi" />
+          <ScalarProperty Name="Kupovina_ID" ColumnName="Kupovina ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

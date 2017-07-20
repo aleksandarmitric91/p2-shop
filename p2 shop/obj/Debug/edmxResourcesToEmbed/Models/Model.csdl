@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ShopingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tip_Proizvodas" EntityType="ShopingModel.Tip_Proizvoda" />
+    <EntitySet Name="Grupa_tipa_proizvodas" EntityType="ShopingModel.Grupa_tipa_proizvoda" />
+    <AssociationSet Name="FK_Tip_Proizvoda_Grupa_tipa_proizvoda" Association="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda">
+      <End Role="Grupa_tipa_proizvoda" EntitySet="Grupa_tipa_proizvodas" />
+      <End Role="Tip_Proizvoda" EntitySet="Tip_Proizvodas" />
+    </AssociationSet>
+    <EntitySet Name="Pregledis" EntityType="ShopingModel.Pregledi" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Korisnicis" EntityType="ShopingModel.Korisnici" />
+    <EntitySet Name="Proizvodis" EntityType="ShopingModel.Proizvodi" />
+    <AssociationSet Name="FK_Pregledi_Proizvod" Association="ShopingModel.FK_Pregledi_Proizvod">
+      <End Role="Proizvodi" EntitySet="Proizvodis" />
+      <End Role="Pregledi" EntitySet="Pregledis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proizvodi_Tip_Proizvoda" Association="ShopingModel.FK_Proizvodi_Tip_Proizvoda">
+      <End Role="Tip_Proizvoda" EntitySet="Tip_Proizvodas" />
+      <End Role="Proizvodi" EntitySet="Proizvodis" />
+    </AssociationSet>
+    <EntitySet Name="Proizvodi_Korisnicis" EntityType="ShopingModel.Proizvodi_Korisnici" />
+    <AssociationSet Name="FK_Proizvodi_Korisnici_Korisnici" Association="ShopingModel.FK_Proizvodi_Korisnici_Korisnici">
+      <End Role="Korisnici" EntitySet="Korisnicis" />
+      <End Role="Proizvodi_Korisnici" EntitySet="Proizvodi_Korisnicis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proizvodi_Korisnici_Proizvodi" Association="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi">
+      <End Role="Proizvodi" EntitySet="Proizvodis" />
+      <End Role="Proizvodi_Korisnici" EntitySet="Proizvodi_Korisnicis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Tip_Proizvoda">
+    <Key>
+      <PropertyRef Name="Tip_Proizvoda_ID" />
+    </Key>
+    <Property Name="Tip_Proizvoda_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv_Tipa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FK_Grupa_tipa_proizvoda" Type="Int64" />
+    <NavigationProperty Name="Grupa_tipa_proizvoda" Relationship="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda" FromRole="Tip_Proizvoda" ToRole="Grupa_tipa_proizvoda" />
+    <NavigationProperty Name="Proizvodis" Relationship="ShopingModel.FK_Proizvodi_Tip_Proizvoda" FromRole="Tip_Proizvoda" ToRole="Proizvodi" />
+  </EntityType>
+  <EntityType Name="Grupa_tipa_proizvoda">
+    <Key>
+      <PropertyRef Name="Grupa_tipa_proizvoda_ID" />
+    </Key>
+    <Property Name="Grupa_tipa_proizvoda_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv_grupe_tipa_proizvoda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tip_Proizvoda" Relationship="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda" FromRole="Grupa_tipa_proizvoda" ToRole="Tip_Proizvoda" />
+  </EntityType>
+  <Association Name="FK_Tip_Proizvoda_Grupa_tipa_proizvoda">
+    <End Type="ShopingModel.Grupa_tipa_proizvoda" Role="Grupa_tipa_proizvoda" Multiplicity="0..1" />
+    <End Type="ShopingModel.Tip_Proizvoda" Role="Tip_Proizvoda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupa_tipa_proizvoda">
+        <PropertyRef Name="Grupa_tipa_proizvoda_ID" />
+      </Principal>
+      <Dependent Role="Tip_Proizvoda">
+        <PropertyRef Name="FK_Grupa_tipa_proizvoda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Pregledi">
+    <Key>
+      <PropertyRef Name="Pregled_ID" />
+    </Key>
+    <Property Name="Pregled_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pregledac" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ocjena" Type="Int64" />
+    <Property Name="Komentar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Datum_ocjenjivanja" Type="DateTime" Precision="0" />
+    <Property Name="FK_Proizvod_ID" Type="Int64" />
+    <NavigationProperty Name="Proizvodi" Relationship="ShopingModel.FK_Pregledi_Proizvod" FromRole="Pregledi" ToRole="Proizvodi" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="Korisnik_ID" />
+    </Key>
+    <Property Name="Korisnik_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Prezime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Korisničko_ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Šifra" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Proizvodi_Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Korisnici" FromRole="Korisnici" ToRole="Proizvodi_Korisnici" />
+    <Property Name="Admin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proizvodi">
+    <Key>
+      <PropertyRef Name="Proizvod_ID" />
+    </Key>
+    <Property Name="Proizvod_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cijena" Type="Double" />
+    <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Naziv_Slike" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="FK_Tip_Proizvoda" Type="Int64" />
+    <Property Name="Istaknuti" Type="Boolean" Nullable="false" />
+    <Property Name="Akcija" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Pregledis" Relationship="ShopingModel.FK_Pregledi_Proizvod" FromRole="Proizvodi" ToRole="Pregledi" />
+    <NavigationProperty Name="Tip_Proizvoda" Relationship="ShopingModel.FK_Proizvodi_Tip_Proizvoda" FromRole="Proizvodi" ToRole="Tip_Proizvoda" />
+    <NavigationProperty Name="Proizvodi_Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi" FromRole="Proizvodi" ToRole="Proizvodi_Korisnici" />
+  </EntityType>
+  <Association Name="FK_Pregledi_Proizvod">
+    <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="0..1" />
+    <End Type="ShopingModel.Pregledi" Role="Pregledi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodi">
+        <PropertyRef Name="Proizvod_ID" />
+      </Principal>
+      <Dependent Role="Pregledi">
+        <PropertyRef Name="FK_Proizvod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proizvodi_Tip_Proizvoda">
+    <End Type="ShopingModel.Tip_Proizvoda" Role="Tip_Proizvoda" Multiplicity="0..1" />
+    <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Proizvoda">
+        <PropertyRef Name="Tip_Proizvoda_ID" />
+      </Principal>
+      <Dependent Role="Proizvodi">
+        <PropertyRef Name="FK_Tip_Proizvoda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Proizvodi_Korisnici">
+    <Key>
+      <PropertyRef Name="Kupovina_ID" />
+    </Key>
+    <Property Name="Kupovina_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_Proizvodi" Type="Int64" />
+    <Property Name="FK_Korisnici" Type="Int64" />
+    <NavigationProperty Name="Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Korisnici" FromRole="Proizvodi_Korisnici" ToRole="Korisnici" />
+    <NavigationProperty Name="Proizvodi" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi" FromRole="Proizvodi_Korisnici" ToRole="Proizvodi" />
+  </EntityType>
+  <Association Name="FK_Proizvodi_Korisnici_Korisnici">
+    <End Type="ShopingModel.Korisnici" Role="Korisnici" Multiplicity="0..1" />
+    <End Type="ShopingModel.Proizvodi_Korisnici" Role="Proizvodi_Korisnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="Korisnik_ID" />
+      </Principal>
+      <Dependent Role="Proizvodi_Korisnici">
+        <PropertyRef Name="FK_Korisnici" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proizvodi_Korisnici_Proizvodi">
+    <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="0..1" />
+    <End Type="ShopingModel.Proizvodi_Korisnici" Role="Proizvodi_Korisnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodi">
+        <PropertyRef Name="Proizvod_ID" />
+      </Principal>
+      <Dependent Role="Proizvodi_Korisnici">
+        <PropertyRef Name="FK_Proizvodi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

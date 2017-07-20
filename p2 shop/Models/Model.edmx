@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ShopingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Grupa tipa proizvoda">
+          <Key>
+            <PropertyRef Name="Grupa tipa proizvoda ID" />
+          </Key>
+          <Property Name="Grupa tipa proizvoda ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv grupe tipa proizvoda" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Korisnici">
+          <Key>
+            <PropertyRef Name="Korisnik ID" />
+          </Key>
+          <Property Name="Korisnik ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="varchar(max)" />
+          <Property Name="Prezime" Type="varchar(max)" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="Korisničko ime" Type="varchar(max)" />
+          <Property Name="Šifra" Type="varchar(max)" />
+          <Property Name="Admin" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pregledi">
+          <Key>
+            <PropertyRef Name="Pregled ID" />
+          </Key>
+          <Property Name="Pregled ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pregledac" Type="nvarchar(max)" />
+          <Property Name="Ocjena" Type="bigint" />
+          <Property Name="Komentar" Type="nvarchar(max)" />
+          <Property Name="Datum ocjenjivanja" Type="date" />
+          <Property Name="FK Proizvod ID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Proizvodi">
+          <Key>
+            <PropertyRef Name="Proizvod ID" />
+          </Key>
+          <Property Name="Proizvod ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="nvarchar(max)" />
+          <Property Name="Cijena" Type="float" />
+          <Property Name="Opis" Type="nvarchar(max)" />
+          <Property Name="Naziv Slike" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="FK Tip Proizvoda" Type="bigint" />
+          <Property Name="Istaknuti" Type="bit" Nullable="false" />
+          <Property Name="Akcija" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Proizvodi Korisnici">
+          <Key>
+            <PropertyRef Name="Kupovina ID" />
+          </Key>
+          <Property Name="Kupovina ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK Proizvodi" Type="bigint" />
+          <Property Name="FK Korisnici" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Tip Proizvoda">
+          <Key>
+            <PropertyRef Name="Tip Proizvoda ID" />
+          </Key>
+          <Property Name="Tip Proizvoda ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv Tipa" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK Grupa tipa proizvoda" Type="bigint" />
+        </EntityType>
+        <Association Name="FK_Pregledi_Proizvod">
+          <End Role="Proizvodi" Type="Self.Proizvodi" Multiplicity="0..1" />
+          <End Role="Pregledi" Type="Self.Pregledi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proizvodi">
+              <PropertyRef Name="Proizvod ID" />
+            </Principal>
+            <Dependent Role="Pregledi">
+              <PropertyRef Name="FK Proizvod ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Proizvodi Korisnici_Korisnici">
+          <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="0..1" />
+          <End Role="Proizvodi Korisnici" Type="Self.Proizvodi Korisnici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnici">
+              <PropertyRef Name="Korisnik ID" />
+            </Principal>
+            <Dependent Role="Proizvodi Korisnici">
+              <PropertyRef Name="FK Korisnici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Proizvodi Korisnici_Proizvodi">
+          <End Role="Proizvodi" Type="Self.Proizvodi" Multiplicity="0..1" />
+          <End Role="Proizvodi Korisnici" Type="Self.Proizvodi Korisnici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proizvodi">
+              <PropertyRef Name="Proizvod ID" />
+            </Principal>
+            <Dependent Role="Proizvodi Korisnici">
+              <PropertyRef Name="FK Proizvodi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Proizvodi_Tip_Proizvoda">
+          <End Role="Tip Proizvoda" Type="Self.Tip Proizvoda" Multiplicity="0..1" />
+          <End Role="Proizvodi" Type="Self.Proizvodi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tip Proizvoda">
+              <PropertyRef Name="Tip Proizvoda ID" />
+            </Principal>
+            <Dependent Role="Proizvodi">
+              <PropertyRef Name="FK Tip Proizvoda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tip Proizvoda_Grupa tipa proizvoda">
+          <End Role="Grupa tipa proizvoda" Type="Self.Grupa tipa proizvoda" Multiplicity="0..1" />
+          <End Role="Tip Proizvoda" Type="Self.Tip Proizvoda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupa tipa proizvoda">
+              <PropertyRef Name="Grupa tipa proizvoda ID" />
+            </Principal>
+            <Dependent Role="Tip Proizvoda">
+              <PropertyRef Name="FK Grupa tipa proizvoda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="ShopingModelStoreContainer">
+          <EntitySet Name="Grupa tipa proizvoda" EntityType="Self.Grupa tipa proizvoda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Korisnici" EntityType="Self.Korisnici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pregledi" EntityType="Self.Pregledi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proizvodi" EntityType="Self.Proizvodi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proizvodi Korisnici" EntityType="Self.Proizvodi Korisnici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tip Proizvoda" EntityType="Self.Tip Proizvoda" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Pregledi_Proizvod" Association="Self.FK_Pregledi_Proizvod">
+            <End Role="Proizvodi" EntitySet="Proizvodi" />
+            <End Role="Pregledi" EntitySet="Pregledi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Proizvodi Korisnici_Korisnici" Association="Self.FK_Proizvodi Korisnici_Korisnici">
+            <End Role="Korisnici" EntitySet="Korisnici" />
+            <End Role="Proizvodi Korisnici" EntitySet="Proizvodi Korisnici" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Proizvodi Korisnici_Proizvodi" Association="Self.FK_Proizvodi Korisnici_Proizvodi">
+            <End Role="Proizvodi" EntitySet="Proizvodi" />
+            <End Role="Proizvodi Korisnici" EntitySet="Proizvodi Korisnici" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Proizvodi_Tip_Proizvoda" Association="Self.FK_Proizvodi_Tip_Proizvoda">
+            <End Role="Tip Proizvoda" EntitySet="Tip Proizvoda" />
+            <End Role="Proizvodi" EntitySet="Proizvodi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tip Proizvoda_Grupa tipa proizvoda" Association="Self.FK_Tip Proizvoda_Grupa tipa proizvoda">
+            <End Role="Grupa tipa proizvoda" EntitySet="Grupa tipa proizvoda" />
+            <End Role="Tip Proizvoda" EntitySet="Tip Proizvoda" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ShopingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ShopingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tip_Proizvodas" EntityType="ShopingModel.Tip_Proizvoda" />
+          <EntitySet Name="Grupa_tipa_proizvodas" EntityType="ShopingModel.Grupa_tipa_proizvoda" />
+          <AssociationSet Name="FK_Tip_Proizvoda_Grupa_tipa_proizvoda" Association="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda">
+            <End Role="Grupa_tipa_proizvoda" EntitySet="Grupa_tipa_proizvodas" />
+            <End Role="Tip_Proizvoda" EntitySet="Tip_Proizvodas" />
+          </AssociationSet>
+          <EntitySet Name="Pregledis" EntityType="ShopingModel.Pregledi" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Korisnicis" EntityType="ShopingModel.Korisnici" />
+          <EntitySet Name="Proizvodis" EntityType="ShopingModel.Proizvodi" />
+          <AssociationSet Name="FK_Pregledi_Proizvod" Association="ShopingModel.FK_Pregledi_Proizvod">
+            <End Role="Proizvodi" EntitySet="Proizvodis" />
+            <End Role="Pregledi" EntitySet="Pregledis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Proizvodi_Tip_Proizvoda" Association="ShopingModel.FK_Proizvodi_Tip_Proizvoda">
+            <End Role="Tip_Proizvoda" EntitySet="Tip_Proizvodas" />
+            <End Role="Proizvodi" EntitySet="Proizvodis" />
+          </AssociationSet>
+          <EntitySet Name="Proizvodi_Korisnicis" EntityType="ShopingModel.Proizvodi_Korisnici" />
+          <AssociationSet Name="FK_Proizvodi_Korisnici_Korisnici" Association="ShopingModel.FK_Proizvodi_Korisnici_Korisnici">
+            <End Role="Korisnici" EntitySet="Korisnicis" />
+            <End Role="Proizvodi_Korisnici" EntitySet="Proizvodi_Korisnicis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Proizvodi_Korisnici_Proizvodi" Association="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi">
+            <End Role="Proizvodi" EntitySet="Proizvodis" />
+            <End Role="Proizvodi_Korisnici" EntitySet="Proizvodi_Korisnicis" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Tip_Proizvoda">
+          <Key>
+            <PropertyRef Name="Tip_Proizvoda_ID" />
+          </Key>
+          <Property Name="Tip_Proizvoda_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv_Tipa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Grupa_tipa_proizvoda" Type="Int64" />
+          <NavigationProperty Name="Grupa_tipa_proizvoda" Relationship="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda" FromRole="Tip_Proizvoda" ToRole="Grupa_tipa_proizvoda" />
+          <NavigationProperty Name="Proizvodis" Relationship="ShopingModel.FK_Proizvodi_Tip_Proizvoda" FromRole="Tip_Proizvoda" ToRole="Proizvodi" />
+        </EntityType>
+        <EntityType Name="Grupa_tipa_proizvoda">
+          <Key>
+            <PropertyRef Name="Grupa_tipa_proizvoda_ID" />
+          </Key>
+          <Property Name="Grupa_tipa_proizvoda_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv_grupe_tipa_proizvoda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tip_Proizvoda" Relationship="ShopingModel.FK_Tip_Proizvoda_Grupa_tipa_proizvoda" FromRole="Grupa_tipa_proizvoda" ToRole="Tip_Proizvoda" />
+        </EntityType>
+        <Association Name="FK_Tip_Proizvoda_Grupa_tipa_proizvoda">
+          <End Type="ShopingModel.Grupa_tipa_proizvoda" Role="Grupa_tipa_proizvoda" Multiplicity="0..1" />
+          <End Type="ShopingModel.Tip_Proizvoda" Role="Tip_Proizvoda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupa_tipa_proizvoda">
+              <PropertyRef Name="Grupa_tipa_proizvoda_ID" />
+            </Principal>
+            <Dependent Role="Tip_Proizvoda">
+              <PropertyRef Name="FK_Grupa_tipa_proizvoda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Pregledi">
+          <Key>
+            <PropertyRef Name="Pregled_ID" />
+          </Key>
+          <Property Name="Pregled_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pregledac" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ocjena" Type="Int64" />
+          <Property Name="Komentar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Datum_ocjenjivanja" Type="DateTime" Precision="0" />
+          <Property Name="FK_Proizvod_ID" Type="Int64" />
+          <NavigationProperty Name="Proizvodi" Relationship="ShopingModel.FK_Pregledi_Proizvod" FromRole="Pregledi" ToRole="Proizvodi" />
+        </EntityType>
+        <EntityType Name="Korisnici">
+          <Key>
+            <PropertyRef Name="Korisnik_ID" />
+          </Key>
+          <Property Name="Korisnik_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prezime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Korisničko_ime" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Šifra" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Proizvodi_Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Korisnici" FromRole="Korisnici" ToRole="Proizvodi_Korisnici" />
+          <Property Name="Admin" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Proizvodi">
+          <Key>
+            <PropertyRef Name="Proizvod_ID" />
+          </Key>
+          <Property Name="Proizvod_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cijena" Type="Double" />
+          <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Naziv_Slike" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="FK_Tip_Proizvoda" Type="Int64" />
+          <Property Name="Istaknuti" Type="Boolean" Nullable="false" />
+          <Property Name="Akcija" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Pregledis" Relationship="ShopingModel.FK_Pregledi_Proizvod" FromRole="Proizvodi" ToRole="Pregledi" />
+          <NavigationProperty Name="Tip_Proizvoda" Relationship="ShopingModel.FK_Proizvodi_Tip_Proizvoda" FromRole="Proizvodi" ToRole="Tip_Proizvoda" />
+          <NavigationProperty Name="Proizvodi_Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi" FromRole="Proizvodi" ToRole="Proizvodi_Korisnici" />
+        </EntityType>
+        <Association Name="FK_Pregledi_Proizvod">
+          <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="0..1" />
+          <End Type="ShopingModel.Pregledi" Role="Pregledi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proizvodi">
+              <PropertyRef Name="Proizvod_ID" />
+            </Principal>
+            <Dependent Role="Pregledi">
+              <PropertyRef Name="FK_Proizvod_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Proizvodi_Tip_Proizvoda">
+          <End Type="ShopingModel.Tip_Proizvoda" Role="Tip_Proizvoda" Multiplicity="0..1" />
+          <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tip_Proizvoda">
+              <PropertyRef Name="Tip_Proizvoda_ID" />
+            </Principal>
+            <Dependent Role="Proizvodi">
+              <PropertyRef Name="FK_Tip_Proizvoda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Proizvodi_Korisnici">
+          <Key>
+            <PropertyRef Name="Kupovina_ID" />
+          </Key>
+          <Property Name="Kupovina_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Proizvodi" Type="Int64" />
+          <Property Name="FK_Korisnici" Type="Int64" />
+          <NavigationProperty Name="Korisnici" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Korisnici" FromRole="Proizvodi_Korisnici" ToRole="Korisnici" />
+          <NavigationProperty Name="Proizvodi" Relationship="ShopingModel.FK_Proizvodi_Korisnici_Proizvodi" FromRole="Proizvodi_Korisnici" ToRole="Proizvodi" />
+        </EntityType>
+        <Association Name="FK_Proizvodi_Korisnici_Korisnici">
+          <End Type="ShopingModel.Korisnici" Role="Korisnici" Multiplicity="0..1" />
+          <End Type="ShopingModel.Proizvodi_Korisnici" Role="Proizvodi_Korisnici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnici">
+              <PropertyRef Name="Korisnik_ID" />
+            </Principal>
+            <Dependent Role="Proizvodi_Korisnici">
+              <PropertyRef Name="FK_Korisnici" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Proizvodi_Korisnici_Proizvodi">
+          <End Type="ShopingModel.Proizvodi" Role="Proizvodi" Multiplicity="0..1" />
+          <End Type="ShopingModel.Proizvodi_Korisnici" Role="Proizvodi_Korisnici" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proizvodi">
+              <PropertyRef Name="Proizvod_ID" />
+            </Principal>
+            <Dependent Role="Proizvodi_Korisnici">
+              <PropertyRef Name="FK_Proizvodi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ShopingModelStoreContainer" CdmEntityContainer="ShopingEntities">
+          <EntitySetMapping Name="Tip_Proizvodas">
+            <EntityTypeMapping TypeName="ShopingModel.Tip_Proizvoda">
+              <MappingFragment StoreEntitySet="Tip Proizvoda">
+                <ScalarProperty Name="FK_Grupa_tipa_proizvoda" ColumnName="FK Grupa tipa proizvoda" />
+                <ScalarProperty Name="Naziv_Tipa" ColumnName="Naziv Tipa" />
+                <ScalarProperty Name="Tip_Proizvoda_ID" ColumnName="Tip Proizvoda ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grupa_tipa_proizvodas">
+            <EntityTypeMapping TypeName="ShopingModel.Grupa_tipa_proizvoda">
+              <MappingFragment StoreEntitySet="Grupa tipa proizvoda">
+                <ScalarProperty Name="Naziv_grupe_tipa_proizvoda" ColumnName="Naziv grupe tipa proizvoda" />
+                <ScalarProperty Name="Grupa_tipa_proizvoda_ID" ColumnName="Grupa tipa proizvoda ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pregledis">
+            <EntityTypeMapping TypeName="ShopingModel.Pregledi">
+              <MappingFragment StoreEntitySet="Pregledi">
+                <ScalarProperty Name="FK_Proizvod_ID" ColumnName="FK Proizvod ID" />
+                <ScalarProperty Name="Datum_ocjenjivanja" ColumnName="Datum ocjenjivanja" />
+                <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+                <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+                <ScalarProperty Name="Pregledac" ColumnName="Pregledac" />
+                <ScalarProperty Name="Pregled_ID" ColumnName="Pregled ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ShopingModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ShopingModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ShopingModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ShopingModel.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ShopingModel.Store.sp_helpdiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ShopingModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ShopingModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Korisnicis">
+            <EntityTypeMapping TypeName="ShopingModel.Korisnici">
+              <MappingFragment StoreEntitySet="Korisnici">
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Šifra" ColumnName="Šifra" />
+                <ScalarProperty Name="Korisničko_ime" ColumnName="Korisničko ime" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Korisnik_ID" ColumnName="Korisnik ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proizvodis">
+            <EntityTypeMapping TypeName="ShopingModel.Proizvodi">
+              <MappingFragment StoreEntitySet="Proizvodi">
+                <ScalarProperty Name="Akcija" ColumnName="Akcija" />
+                <ScalarProperty Name="Istaknuti" ColumnName="Istaknuti" />
+                <ScalarProperty Name="FK_Tip_Proizvoda" ColumnName="FK Tip Proizvoda" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Naziv_Slike" ColumnName="Naziv Slike" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Proizvod_ID" ColumnName="Proizvod ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proizvodi_Korisnicis">
+            <EntityTypeMapping TypeName="ShopingModel.Proizvodi_Korisnici">
+              <MappingFragment StoreEntitySet="Proizvodi Korisnici">
+                <ScalarProperty Name="FK_Korisnici" ColumnName="FK Korisnici" />
+                <ScalarProperty Name="FK_Proizvodi" ColumnName="FK Proizvodi" />
+                <ScalarProperty Name="Kupovina_ID" ColumnName="Kupovina ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

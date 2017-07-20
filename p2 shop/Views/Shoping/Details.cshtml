@@ -1,0 +1,128 @@
+﻿@model p2_shop.Models.Mix_Proizvodi_Pregledi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int suma_ocjena, broj_ocjena;
+    double prosjek_ocjena;
+    string datum;
+}
+
+<div class="container col-md-10">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="thumbnail">
+                <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                <div class="caption-full">
+                    <h4 class="pull-right">@Html.DisplayFor(model => model.proizvod.Cijena) KM</h4>
+                    <h4>
+                        <a href="#">@Html.DisplayFor(model => model.proizvod.Naziv)</a>
+                    </h4>
+                    <p>@Html.DisplayFor(model => model.proizvod.Opis)</p>
+                </div>
+
+                @{  suma_ocjena = 0;
+                    prosjek_ocjena = 0;
+                    broj_ocjena = 0;
+                    foreach (var komentar in Model.Grupa_pregleda)
+                    {
+                        if (Model.proizvod.Proizvod_ID == komentar.FK_Proizvod_ID)
+                        {
+                            broj_ocjena++;
+                            suma_ocjena += (Int32)komentar.Ocjena;
+                        }
+                    }
+                    try
+                    {
+                        prosjek_ocjena = (double)suma_ocjena / (double)broj_ocjena;
+                    }
+                    catch (Exception)
+                    { }
+                }
+
+
+                <div class="ratings">
+                    <p class="pull-right"></p>
+                    <p>
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            double k = i - 0.5;
+                            if (k <= prosjek_ocjena)
+                            {
+                                <span class="glyphicon glyphicon-star"></span>
+                            }
+                            else
+                            {
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            }
+                        }
+                        @{
+                            double prosjek_ocjena_mod = prosjek_ocjena % 1;
+                            if (prosjek_ocjena_mod >= 0.5)
+                            {
+                                prosjek_ocjena_mod = 1;
+                            }
+                            else
+                            {
+                                prosjek_ocjena_mod = 0;
+                            }
+                            prosjek_ocjena += prosjek_ocjena_mod;
+                        } 
+                        @prosjek_ocjena.ToString().Substring(0,1) zvjezdice
+                    </p>
+                </div>
+            </div>
+
+            <div class="well">
+                <div class="text-right">
+                    <a href="@Url.Action("Create","Pregledi",new { id=Model.proizvod.Proizvod_ID })" class="btn btn-success">Ostavi utisak o proizvodu</a>
+                </div>
+                <hr>
+
+                @foreach (var komentar in Model.Grupa_pregleda)
+                {
+                    if (Model.proizvod.Proizvod_ID == komentar.FK_Proizvod_ID)
+                    {
+                        <div class="row">
+                            <div class="col-md-12">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= komentar.Ocjena)
+                                    {
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    }
+                                }
+                                @komentar.Pregledac
+                                @{
+                                    try
+                                    {
+                                        datum = komentar.Datum_ocjenjivanja.Value.Day.ToString() + "/" +
+                                            komentar.Datum_ocjenjivanja.Value.Month.ToString() + "/" +
+                                            komentar.Datum_ocjenjivanja.Value.Year.ToString();
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                        datum ="";
+                                    }
+                                }
+
+                                <span class="pull-right">@datum</span>
+                                <p>@komentar.Komentar</p>
+                            </div>
+                        </div>
+                        <hr>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Nazad na listu", "Index")
+    </p>
+</div>
+

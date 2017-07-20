@@ -1,0 +1,16 @@
+﻿@model p2_shop.Models.Korisnici
+
+@if (Session["Korisničko_ime"] == null)
+{
+    <li><a href="/Account/Register"><span class="glyphicon glyphicon-user"></span> Registracija</a></li>
+    <li><a href="/Account/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+}
+else if (Session["Admin"].ToString() == "False")
+{
+    <li><a href="/Account/Logout"><span class="glyphicon glyphicon-log-in"></span> Log out (@Session["Korisničko_ime"].ToString())</a></li>
+}
+else
+{
+    <li><a href="/Account/Logout"><span class="glyphicon glyphicon-log-in"></span> Log out (@Session["Korisničko_ime"].ToString())</a></li>
+    <li><a href="/Account/Administracija"><span class="glyphicon glyphicon-cog"></span> Administrativni deo </a></li>
+}

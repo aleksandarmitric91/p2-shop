@@ -1,0 +1,111 @@
+﻿@model IEnumerable<p2_shop.Models.Proizvodi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-10">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Kreiraj novi proizvod", "Create")
+    </p>
+    <table class="table col-md-10">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv_Slike)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Istaknuti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Akcija)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tip_Proizvoda.Naziv_Tipa)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cijena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Opis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv_Slike)
+                </td>
+                <td>
+                    @{
+                        string odgovor = "";
+                        if (item.Active == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                     }
+                    @odgovor
+                </td>
+                <td>
+                    @{
+                        odgovor = "";
+                        if (item.Istaknuti == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                    }
+                    @odgovor
+                </td>
+                <td>
+                    @{
+                        odgovor = "";
+                        if (item.Akcija == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                    }
+                    @odgovor
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tip_Proizvoda.Naziv_Tipa)
+                </td>
+                <td>
+                    @Html.ActionLink("Uredi", "Edit", new { id = item.Proizvod_ID }) |
+                    @Html.ActionLink("Detalji", "Details", new { id = item.Proizvod_ID }) |
+                    @Html.ActionLink("Obriši", "Delete", new { id = item.Proizvod_ID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

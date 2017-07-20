@@ -1,0 +1,50 @@
+﻿@model p2_shop.Models.Grupa_tipa_proizvoda
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container col-md-10">
+    <div class="row">
+        <div class="col-md-10">
+            <h2>Brisanje</h2>
+
+            <h3>Da li ste sigurni da želite obrisati ovu grupu tipa proizvoda?</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <h4>Grupa tipa proizvoda</h4>
+            <hr />
+            <dl class="dl-horizontal col-md-10">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Naziv_grupe_tipa_proizvoda)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Naziv_grupe_tipa_proizvoda)
+                </dd>
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <input type="submit" value="Obriši" class="btn btn-default" />
+                            </div>
+                            <div class="col-md-10">
+                                @Html.ActionLink("Nazad na listu", "Index")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+﻿@model p2_shop.Models.Proizvodi
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container col-md-10">
+    <div class="row">
+        <div class="col-md-10">
+            <h2>Brisanje</h2>
+
+            <h3>Da li ste sigurni da želite obrisati ovaj proizvod?</h3>
+        </div>
+    </div>
+
+    <div class="row">
+            
+        <div class="col-md-10">
+            <h4>Proizvod</h4>
+                
+            <hr />
+            <dl class="dl-horizontal col-md-10">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Naziv)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Naziv)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cijena)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cijena)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Opis)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Opis)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Naziv_Slike)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Naziv_Slike)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Active)
+                </dt>
+
+                <dd>
+                    @{
+                        string odgovor;
+                        if (this.Model.Active == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                    }
+                    @odgovor
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Istaknuti)
+                </dt>
+
+                <dd>
+                    @{
+                        if (this.Model.Istaknuti == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                    }
+                    @odgovor
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Akcija)
+                </dt>
+
+                <dd>
+                    @{
+                        if (this.Model.Akcija == true)
+                        {
+                            odgovor = "Da";
+                        }
+                        else
+                        {
+                            odgovor = "Ne";
+                        }
+                    }
+                    @odgovor
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tip_Proizvoda.Naziv_Tipa)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tip_Proizvoda.Naziv_Tipa)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <input type="submit" value="Obriši" class="btn btn-default" />
+                            </div>
+                            <div class="col-md-10">
+                                @Html.ActionLink("Nazad na listu", "Index")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

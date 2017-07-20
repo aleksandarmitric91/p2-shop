@@ -1,0 +1,37 @@
+﻿@model IEnumerable<p2_shop.Models.Grupa_tipa_proizvoda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container col-md-10">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Kreiraj novu grupu tipa proizvoda", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv_grupe_tipa_proizvoda)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv_grupe_tipa_proizvoda)
+                </td>
+                <td>
+                    @Html.ActionLink("Uredi", "Edit", new { id = item.Grupa_tipa_proizvoda_ID }) |
+                    @Html.ActionLink("Detalji", "Details", new { id = item.Grupa_tipa_proizvoda_ID }) |
+                    @Html.ActionLink("Obriši", "Delete", new { id = item.Grupa_tipa_proizvoda_ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

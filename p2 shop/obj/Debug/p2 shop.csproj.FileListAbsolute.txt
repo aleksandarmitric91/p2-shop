@@ -1,0 +1,374 @@
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\ApplicationInsights.config
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\csc.exe
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\vbc.exe
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\p2 shop.dll.config
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\p2 shop.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\p2 shop.pdb
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.Web.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Helpers.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Mvc.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Razor.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.Web.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Razor.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Helpers.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\bin\System.Web.Mvc.xml
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\obj\Debug\p2 shop.dll
+c:\users\aleksandar mitric\documents\visual studio 2015\Projects\p2 shop\p2 shop\obj\Debug\p2 shop.pdb
+E:\p2 shop\p2 shop\bin\ApplicationInsights.config
+E:\p2 shop\p2 shop\bin\roslyn\csc.exe
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\p2 shop\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\p2 shop\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+E:\p2 shop\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+E:\p2 shop\p2 shop\bin\roslyn\vbc.exe
+E:\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe
+E:\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+E:\p2 shop\p2 shop\bin\p2 shop.dll.config
+E:\p2 shop\p2 shop\bin\p2 shop.dll
+E:\p2 shop\p2 shop\bin\p2 shop.pdb
+E:\p2 shop\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.Web.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+E:\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.dll
+E:\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\p2 shop\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+E:\p2 shop\p2 shop\bin\System.Web.Helpers.dll
+E:\p2 shop\p2 shop\bin\System.Web.Mvc.dll
+E:\p2 shop\p2 shop\bin\System.Web.Razor.dll
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.dll
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.dll
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.dll
+E:\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+E:\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\p2 shop\p2 shop\bin\Microsoft.AI.Web.xml
+E:\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+E:\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.xml
+E:\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\p2 shop\p2 shop\bin\System.Web.Razor.xml
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.xml
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.xml
+E:\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.xml
+E:\p2 shop\p2 shop\bin\System.Web.Helpers.xml
+E:\p2 shop\p2 shop\bin\System.Web.Mvc.xml
+E:\p2 shop\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+E:\p2 shop\p2 shop\obj\Debug\p2 shop.dll
+E:\p2 shop\p2 shop\obj\Debug\p2 shop.pdb
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\ApplicationInsights.config
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\csc.exe
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\vbc.exe
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\p2 shop.dll.config
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\p2 shop.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\p2 shop.pdb
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\EntityFramework.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\EntityFramework.SqlServer.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.Web.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Helpers.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Mvc.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Razor.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\EntityFramework.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\EntityFramework.SqlServer.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.Web.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Razor.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Helpers.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\bin\System.Web.Mvc.xml
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\obj\Debug\p2 shop.dll
+C:\Users\Slobodan\Desktop\p2 shop\p2 shop\obj\Debug\p2 shop.pdb
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\ApplicationInsights.config
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\csc.exe
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\vbc.exe
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\VBCSCompiler.exe
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\p2 shop.dll.config
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\p2 shop.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\p2 shop.pdb
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\EntityFramework.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\EntityFramework.SqlServer.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.Web.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Helpers.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Mvc.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Razor.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.Razor.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\EntityFramework.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\EntityFramework.SqlServer.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.Web.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Razor.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Webpages.Razor.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Helpers.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\bin\System.Web.Mvc.xml
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\obj\Debug\p2 shop.dll
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\obj\Debug\p2 shop.pdb
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\obj\Debug\p2_shop.Properties.Resources.resources
+C:\Users\Aleksandar Mitric\Desktop\projekat 2 slobo\p2 shop SK\p2 shop\obj\Debug\p2 shop.csproj.GenerateResource.Cache
+D:\p2 shop\p2 shop\bin\ApplicationInsights.config
+D:\p2 shop\p2 shop\bin\roslyn\csc.exe
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\p2 shop\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+D:\p2 shop\p2 shop\bin\roslyn\vbc.exe
+D:\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe
+D:\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+D:\p2 shop\p2 shop\bin\p2 shop.dll.config
+D:\p2 shop\p2 shop\bin\p2 shop.dll
+D:\p2 shop\p2 shop\bin\p2 shop.pdb
+D:\p2 shop\p2 shop\bin\EntityFramework.dll
+D:\p2 shop\p2 shop\bin\EntityFramework.SqlServer.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.Web.dll
+D:\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+D:\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.dll
+D:\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\p2 shop\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+D:\p2 shop\p2 shop\bin\System.Web.Helpers.dll
+D:\p2 shop\p2 shop\bin\System.Web.Mvc.dll
+D:\p2 shop\p2 shop\bin\System.Web.Razor.dll
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.dll
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.dll
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.dll
+D:\p2 shop\p2 shop\bin\EntityFramework.xml
+D:\p2 shop\p2 shop\bin\EntityFramework.SqlServer.xml
+D:\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+D:\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\p2 shop\p2 shop\bin\Microsoft.AI.Web.xml
+D:\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+D:\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.xml
+D:\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\p2 shop\p2 shop\bin\System.Web.Razor.xml
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.xml
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.xml
+D:\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.xml
+D:\p2 shop\p2 shop\bin\System.Web.Helpers.xml
+D:\p2 shop\p2 shop\bin\System.Web.Mvc.xml
+D:\p2 shop\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+D:\p2 shop\p2 shop\obj\Debug\p2_shop.Properties.Resources.resources
+D:\p2 shop\p2 shop\obj\Debug\p2 shop.csproj.GenerateResource.Cache
+D:\p2 shop\p2 shop\obj\Debug\p2 shop.dll
+D:\p2 shop\p2 shop\obj\Debug\p2 shop.pdb
+D:\p2 shop\p2 shop\bin\roslyn\csc.exe.config
+D:\p2 shop\p2 shop\bin\roslyn\csc.rsp
+D:\p2 shop\p2 shop\bin\roslyn\csi.exe
+D:\p2 shop\p2 shop\bin\roslyn\csi.exe.config
+D:\p2 shop\p2 shop\bin\roslyn\csi.rsp
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\p2 shop\p2 shop\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.AppContext.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Console.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.Process.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.IO.Compression.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.IO.Pipes.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.AccessControl.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Claims.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Security.Principal.Windows.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Threading.Thread.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.ValueTuple.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Xml.XmlDocument.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Xml.XPath.dll
+D:\p2 shop\p2 shop\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\p2 shop\p2 shop\bin\roslyn\vbc.exe.config
+D:\p2 shop\p2 shop\bin\roslyn\vbc.rsp
+D:\p2 shop\p2 shop\bin\Newtonsoft.Json.dll
+D:\p2 shop\p2 shop\bin\Newtonsoft.Json.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\ApplicationInsights.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csc.exe
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csc.exe.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csc.rsp
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csi.exe
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csi.exe.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\csi.rsp
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.AppContext.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Console.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.IO.Compression.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.IO.Pipes.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Claims.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Threading.Thread.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.ValueTuple.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\vbc.exe
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\vbc.exe.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\vbc.rsp
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\p2 shop.dll.config
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\p2 shop.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\p2 shop.pdb
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\EntityFramework.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Newtonsoft.Json.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Helpers.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Mvc.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Razor.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\EntityFramework.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\Newtonsoft.Json.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Razor.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.Deployment.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Webpages.Razor.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Helpers.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\bin\System.Web.Mvc.xml
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\obj\Debug\p2 shop.csprojResolveAssemblyReference.cache
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\obj\Debug\p2_shop.Properties.Resources.resources
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\obj\Debug\p2 shop.csproj.GenerateResource.Cache
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\obj\Debug\p2 shop.dll
+C:\Users\pc\Downloads\p2 shop\p2 shop\p2 shop\obj\Debug\p2 shop.pdb

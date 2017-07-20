@@ -1,0 +1,60 @@
+﻿@model IEnumerable<p2_shop.Models.Pregledi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container col-md-10">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Kreiraj novi pregled", "Create",new { id=0})
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pregledac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ocjena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Komentar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datum_ocjenjivanja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proizvodi.Naziv)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pregledac)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ocjena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Komentar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datum_ocjenjivanja)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proizvodi.Naziv)
+                </td>
+                <td>
+                    @Html.ActionLink("Uredi", "Edit", new { id = item.Pregled_ID }) |
+                    @Html.ActionLink("Detalji", "Details", new { id = item.Pregled_ID }) |
+                    @Html.ActionLink("Obriši", "Delete", new { id = item.Pregled_ID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
